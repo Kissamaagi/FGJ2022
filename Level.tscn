@@ -211,7 +211,7 @@ points = PoolVector2Array( 64, 0, 0, 0, 0, 0, 64, 0 )
 
 [node name="GameCamera" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 1.95, 1.95 )
 script = ExtResource( 3 )
 
 [node name="PlayerCat" parent="." instance=ExtResource( 2 )]

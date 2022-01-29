@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/Background/skym.png" type="Texture" id=1]
+[ext_resource path="res://KitchenBackground.cs" type="Script" id=2]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 4
 load_path = "res://.import/kitche.png-8ba3778d8266f180e254e74cfffe75ee.stex"
 
-[node name="ParallaxBackground" type="ParallaxBackground"]
+[node name="KitchenBackground" type="ParallaxBackground"]
+script = ExtResource( 2 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 position = Vector2( 513, 195 )
