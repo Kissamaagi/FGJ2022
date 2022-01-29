@@ -1,54 +1,45 @@
 using Godot;
 using System;
 
-public class PlayerCat : Area2D
+public class PlayerCat : KinematicBody2D
 {
-    [Export]
-    public int Speed = 400;
+    [Export] public int speed = 200;
+    [Export] public int gravity = 10000;
+
+    [Export] public int jumpSpeed = -3000;
+
+    [Export] public float friction = 0.20F;
+
     public Vector2 ScreenSize;
+    public Vector2 velocity = new Vector2();
 
     // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
-    {
+    public override void _Ready(){
         ScreenSize = GetViewportRect().Size;
     }
+    public void GetInput() {
+        if (Input.IsActionPressed("move_right")) { velocity.x += speed; }
+        if (Input.IsActionPressed("move_left")) { velocity.x -= speed; }
+        if (Input.IsActionJustPressed("jump") && IsOnFloor()) { velocity.y = jumpSpeed; }
+        if (Input.IsActionJustPressed("down") && IsOnFloor()) { Position += new Vector2(0, 10); }
+        
+        velocity.x = Mathf.Lerp(velocity.x, 0, friction);
+    }
 
-  // Called every frame. 'delta' is the elapsed time since the previous frame.
-  public override void _Process(float delta)
-  {
-      var velocity = Vector2.Zero;
 
-      if (Input.IsActionPressed("move_right"))
-      {
-          velocity.x += 1;
-      }
+    public override void _PhysicsProcess(float delta) {
+        GetInput();
 
-      if (Input.IsActionPressed("move_left"))
-      {
-          velocity.x -= 1;
-      }
+        velocity.y += gravity * delta;
 
-      if (Input.IsActionPressed("jump"))
-      {
-          velocity.y -= 1; 
-      }
+        
 
-      var animatedSprite = GetNode<AnimatedSprite>("AnimatedSprite");
+        Vector2 UP = new Vector2(0, -1);
+        velocity = MoveAndSlide(velocity, UP);
 
-      if (velocity.Length() > 0)
-      {
-          velocity = velocity.Normalized() * Speed;
-          animatedSprite.Play();
-      }
-      else 
-      {
-          animatedSprite.Stop();
-      }
+        
 
-      Position += velocity * delta;
-      Position = new Vector2(
-          x: Mathf.Clamp(Position.x, 0, ScreenSize.x),
-          y: Mathf.Clamp(Position.y, 0, ScreenSize.y)
-      );
-  }
+
+    }
+
 }

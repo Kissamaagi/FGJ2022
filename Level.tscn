@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://KinematicBody2D.cs" type="Script" id=1]
+[ext_resource path="res://PlayerCat.cs" type="Script" id=1]
 [ext_resource path="res://playerGrey_walk1.png" type="Texture" id=2]
 [ext_resource path="res://playerGrey_walk2.png" type="Texture" id=3]
 [ext_resource path="res://tilesheet.png" type="Texture" id=4]
@@ -69,7 +69,7 @@ points = PoolVector2Array( 64, 0, 64, 0, 64, 64, 0, 64 )
 points = PoolVector2Array( 0, 64, 0, 64, 0, 64, 0, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
-points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+points = PoolVector2Array( 64, 0, 0, 0, 0, 0, 64, 0 )
 
 [sub_resource type="TileSet" id=20]
 0/name = "tilesheet.png 0"
@@ -223,8 +223,6 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 [node name="PlayerCat" type="KinematicBody2D" parent="."]
 position = Vector2( 117, 353 )
 script = ExtResource( 1 )
-gravity = 2000
-jumpSpeed = -1200
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCat"]
 position = Vector2( 251, -151 )
