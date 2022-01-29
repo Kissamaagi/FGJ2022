@@ -19,14 +19,22 @@ public class PlayerCat : KinematicBody2D
         ScreenSize = GetViewportRect().Size;
     }
     public void GetInput() {
-        if (Input.IsActionPressed("move_right") || Input.IsActionPressed("move_left")) {
-            if (Input.IsActionPressed("move_right")) { velocity.x += speed; }
-            if (Input.IsActionPressed("move_left")) { velocity.x -= speed; }
-            GetNode<AnimatedSprite>("CatSprite").Playing = true;
-        }
 
+        var catSprite = GetNode<AnimatedSprite>("CatSprite");
+
+        if (Input.IsActionPressed("move_right") || Input.IsActionPressed("move_left")) {
+            if (Input.IsActionPressed("move_right")) { 
+                catSprite.FlipH = false;
+                velocity.x += speed; 
+            }
+            if (Input.IsActionPressed("move_left")) {
+                catSprite.FlipH = true;
+                velocity.x -= speed; 
+            }
+            catSprite.Playing = true;
+        }
         else {
-            GetNode<AnimatedSprite>("CatSprite").Playing = false;
+            catSprite.Playing = false;
         }
 
         if (Input.IsActionJustPressed("jump") && IsOnFloor()) { velocity.y = jumpSpeed; }
