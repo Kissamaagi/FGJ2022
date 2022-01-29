@@ -87,13 +87,13 @@ public class PlayerCat : KinematicBody2D
             CollisionPolygon2D catKickHitbox = GetNode<CollisionPolygon2D>("./KickAreaFront/KickCollision");
             catKickHitbox.Disabled = false;
             catSprite.Animation = rightKickSprite;
-            velocity.x -= speed/4;
+            // velocity.x -= speed/4;
         }
         if (direction == "left") {
             CollisionPolygon2D catKickHitbox = GetNode<CollisionPolygon2D>("./KickAreaBack/KickCollisionBack");
             catKickHitbox.Disabled = false;
             catSprite.Animation = leftKickSprite;
-            velocity.x += speed/4;
+            // velocity.x += speed/4;
         }
         // catKickHitbox.Disabled = true;
     }
