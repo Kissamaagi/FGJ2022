@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://CatSprite.cs" type="Script" id=1]
 [ext_resource path="res://mjätkissa.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://standcat.png" type="Texture" id=19]
 [ext_resource path="res://jömpkissa.png" type="Texture" id=20]
 [ext_resource path="res://standcat2.png" type="Texture" id=21]
+[ext_resource path="res://standcat3.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -39,7 +40,7 @@ animations = [ {
 "name": "kickback",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 21 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "stand",
 "speed": 5.0
@@ -56,11 +57,6 @@ extents = Vector2( 84, 70 )
 [node name="PlayerCat" type="KinematicBody2D"]
 position = Vector2( 117, 353 )
 script = ExtResource( 5 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 251, -151 )
-current = true
-zoom = Vector2( 2, 2 )
 
 [node name="CatSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.8, 0.8 )

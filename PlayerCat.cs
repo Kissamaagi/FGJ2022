@@ -103,8 +103,6 @@ public class PlayerCat : KinematicBody2D
         Vector2 UP = new Vector2(0, -1);
         velocity = MoveAndSlide(velocity, UP);
 
-        
-
 
     }
 
