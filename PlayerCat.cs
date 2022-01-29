@@ -16,6 +16,8 @@ public class PlayerCat : KinematicBody2D
     public Vector2 ScreenSize;
     public Vector2 velocity = new Vector2();
 
+    public Boolean isKicking = false;
+
     // Called when the node enters the scene tree for the first time.
     public override void _Ready(){
         ScreenSize = GetViewportRect().Size;
@@ -77,33 +79,36 @@ public class PlayerCat : KinematicBody2D
     public void HandleKick(String direction) {
         var catSprite = GetNode<AnimatedSprite>("CatSprite");
 
+        isKicking = true;
 
         if (direction == "right") {
             CollisionPolygon2D catKickHitbox = GetNode<CollisionPolygon2D>("./KickAreaFront/KickCollision");
             catKickHitbox.Disabled = false;
             catSprite.Animation = rightKickSprite;
+            velocity.x -= speed/4;
         }
         if (direction == "left") {
             CollisionPolygon2D catKickHitbox = GetNode<CollisionPolygon2D>("./KickAreaBack/KickCollisionBack");
             catKickHitbox.Disabled = false;
             catSprite.Animation = leftKickSprite;
+            velocity.x += speed/4;
         }
         // catKickHitbox.Disabled = true;
-
-
     }
 
     public override void _PhysicsProcess(float delta) {
-        GetInput();
+        if (!isKicking) {
+            GetInput();
 
-        velocity.y += gravity * delta;
+            velocity.y += gravity * delta;
 
-        
+            
 
-        Vector2 UP = new Vector2(0, -1);
-        velocity = MoveAndSlide(velocity, UP);
-
-
+            Vector2 UP = new Vector2(0, -1);
+            velocity = MoveAndSlide(velocity, UP);
+        }
+        else {
+            isKicking = false;
+        }
     }
-
 }
