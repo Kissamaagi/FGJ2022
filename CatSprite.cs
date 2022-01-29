@@ -14,8 +14,7 @@ public class CatSprite : AnimatedSprite
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
-    
-    /*public override void _Process(float delta)
+    public override void _Process(float delta)
     {
         if (Input.IsActionPressed("kick_right")) {
             Animation = "kick";
@@ -26,8 +25,5 @@ public class CatSprite : AnimatedSprite
             Offset = new Vector2(0, 0);
 
         }
-
     }
-    */
-    
 }
