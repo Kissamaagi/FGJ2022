@@ -15,6 +15,6 @@ public class GameCamera : Camera2D
         Vector2 CatPosition = GetNode<KinematicBody2D>("/root/Level/PlayerCat").Position;
 
 
-        GlobalPosition = new Vector2(CatPosition.x + 300, 200);
+        GlobalPosition = new Vector2(CatPosition.x + 300, 230);
     }
 }
