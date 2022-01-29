@@ -1,10 +1,12 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Toaster.tscn" type="PackedScene" id=1]
 [ext_resource path="res://PlayerCat.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GameCamera.cs" type="Script" id=3]
 [ext_resource path="res://tilesheet.png" type="Texture" id=4]
 [ext_resource path="res://ParallaxBackground.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Cup.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Mandarin.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -208,6 +210,7 @@ points = PoolVector2Array( 64, 0, 0, 0, 0, 0, 64, 0 )
 1/z_index = 0
 
 [node name="Level" type="Node2D"]
+position = Vector2( -3, 1 )
 
 [node name="GameCamera" type="Camera2D" parent="."]
 current = true
@@ -225,17 +228,43 @@ __meta__ = {
 }
 
 [node name="Toaster" parent="." instance=ExtResource( 1 )]
-
-[node name="Toaster2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 604, 502 )
-
-[node name="Toaster3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1013, 249 )
-
-[node name="Toaster4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 833, 247 )
-
-[node name="Toaster5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 393, 245 )
+position = Vector2( 484, 272 )
+rotation = 0.230248
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
+
+[node name="Cup" parent="." instance=ExtResource( 6 )]
+position = Vector2( 387, 544 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cup2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 617, 545 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cup3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 850, 545 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Mandarin" parent="." instance=ExtResource( 7 )]
+position = Vector2( 949, 296 )
+collision_mask = 0
+
+[node name="Mandarin2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1004, 294 )
+collision_mask = 0
+
+[node name="Mandarin3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1058, 295 )
+collision_mask = 0
+
+[node name="Mandarin4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 974, 260 )
+collision_mask = 0
+
+[node name="Mandarin5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1029, 259 )
+collision_mask = 0
+
+[node name="Mandarin6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1002, 222 )
+collision_mask = 0
