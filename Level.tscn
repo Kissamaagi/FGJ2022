@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://PlayerCat.cs" type="Script" id=1]
 [ext_resource path="res://mjaywalk2.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://mjätkissa.png" type="Texture" id=6]
 [ext_resource path="res://CatSprite.cs" type="Script" id=7]
 [ext_resource path="res://Toaster.cs" type="Script" id=8]
+[ext_resource path="res://background_textures/skym.png" type="Texture" id=9]
+[ext_resource path="res://background_textures/kitche.png" type="Texture" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -274,3 +276,26 @@ texture = ExtResource( 5 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Toaster"]
 scale = Vector2( 0.7, 0.7 )
 polygon = PoolVector2Array( 63, -88.9, 63, -87.7, 81, -84.7, 81, -83.5, 110, -74.5, 110, -73.2, 125, -65.2, 125, -63.7, 139, -46.7, 139, -42, 147, -8.2, 147, 28, 145.7, 28, 140.7, 59, 138.7, 59, 111.8, 83, 108.6, 83, 61.6, 114, 59.5, 114, 25.5, 132, 22.5, 132, 4.5, 141, -0.899994, 141, -29.8, 148, -33, 148, -65, 147, -65, 145.7, -93, 139.6, -93, 138.4, -105, 134.4, -105, 133.1, -124, 121.1, -124, 119.7, -135, 104.7, -135, 95, -140, 76.3, -140, 64, -143, 59.6, -143, 57, -145, -14, -142.8, -14, -126.7, -27, -123.6, -27, -77.5, -52, -73.4, -52, -54, -59.4, -54, -60.2, -22.5, -77, -19.1, -77, -6, -80.5, -6, -81.1, 5.39999, -88, 6.7, -88, 17, -89.7, 17, -91.1 )
+
+[node name="Kitchen" type="Node" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Kitchen"]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Kitchen/ParallaxBackground"]
+position = Vector2( 0, -500 )
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 2970, 1750 )
+
+[node name="Sky" type="Sprite" parent="Kitchen/ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 383, -870 )
+scale = Vector2( 0.490199, 0.4087 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Kitchen/ParallaxBackground"]
+motion_mirroring = Vector2( 1868, 0 )
+
+[node name="Kitchen" type="Sprite" parent="Kitchen/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 527, -13 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1868, 1200 )
