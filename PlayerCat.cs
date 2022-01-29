@@ -29,21 +29,23 @@ public class PlayerCat : KinematicBody2D
 
 
         if (Input.IsActionPressed("move_right") || Input.IsActionPressed("move_left")) {
-            catSprite.Animation = "walk";
-            if (Input.IsActionPressed("move_right")) { 
-                catSprite.FlipH = false;
-                velocity.x += speed; 
-                rightKickSprite = "kickfront";
-                leftKickSprite = "kickback";
+            if (!Input.IsActionPressed("kick_right") && !Input.IsActionPressed("kick_left")) {
+                catSprite.Animation = "walk";
+                if (Input.IsActionPressed("move_right")) { 
+                    catSprite.FlipH = false;
+                    velocity.x += speed; 
+                    rightKickSprite = "kickfront";
+                    leftKickSprite = "kickback";
 
+                }
+                if (Input.IsActionPressed("move_left")) {
+                    catSprite.FlipH = true;
+                    velocity.x -= speed; 
+                    rightKickSprite = "kickback";
+                    leftKickSprite = "kickfront";
+                }
+                catSprite.Playing = true;
             }
-            if (Input.IsActionPressed("move_left")) {
-                catSprite.FlipH = true;
-                velocity.x -= speed; 
-                rightKickSprite = "kickback";
-                leftKickSprite = "kickfront";
-            }
-            catSprite.Playing = true;
         }
 
 
@@ -85,30 +87,28 @@ public class PlayerCat : KinematicBody2D
             CollisionPolygon2D catKickHitbox = GetNode<CollisionPolygon2D>("./KickAreaFront/KickCollision");
             catKickHitbox.Disabled = false;
             catSprite.Animation = rightKickSprite;
-            velocity.x -= speed/4;
+            // velocity.x -= speed/4;
         }
         if (direction == "left") {
             CollisionPolygon2D catKickHitbox = GetNode<CollisionPolygon2D>("./KickAreaBack/KickCollisionBack");
             catKickHitbox.Disabled = false;
             catSprite.Animation = leftKickSprite;
-            velocity.x += speed/4;
+            // velocity.x += speed/4;
         }
         // catKickHitbox.Disabled = true;
     }
 
     public override void _PhysicsProcess(float delta) {
-        if (!isKicking) {
-            GetInput();
+    
+        GetInput();
 
-            velocity.y += gravity * delta;
+        velocity.y += gravity * delta;
 
             
 
-            Vector2 UP = new Vector2(0, -1);
-            velocity = MoveAndSlide(velocity, UP);
-        }
-        else {
-            isKicking = false;
-        }
+        Vector2 UP = new Vector2(0, -1);
+        velocity = MoveAndSlide(velocity, UP);
+        
+        
     }
 }
