@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Cup/kup.png" type="Texture" id=1]
+[ext_resource path="res://assets/Cup/kup_piece_2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Cup/kup_piece_3.png" type="Texture" id=3]
+[ext_resource path="res://assets/Cup/kup_piece_1.png" type="Texture" id=4]
+[ext_resource path="res://Cup.cs" type="Script" id=5]
+
+[node name="Cup" type="Area2D"]
+position = Vector2( 321, 526 )
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+polygon = PoolVector2Array( 38, -68.8, 66, -65.8, 66, -64.4, 71, -62.4, 71, -60.7, 78, -52.8, 78, -48.4, 86.4, -27, 90.1, -27, 111, -25.9, 111, -24.3, 118, -21.3, 118, -19.8, 128, -9.8, 128, -7.5, 139, 10.4, 139, 39, 137.7, 39, 134.7, 58, 133.1, 58, 122.1, 76, 120.8, 76, 109.8, 86, 106.1, 86, 90, 90.5, 90, 96.1, 85.8, 130, 84.1, 130, 79.1, 138, 72.4, 138, 61.4, 142, 60.2, 142, 28.1, 145, 25, 145, -20, 144, -20, 144.9, -76, 149.2, -76, 147.5, -87, 144.5, -87, 142.8, -98, 131.8, -98, 127.7, -104, 119.7, -104, 113.3, -115, 79.3, -115, 74.4, -123, 35.2, -123, 19.4, -125, 8.2, -125, 5, -123, -39, -120.8, -39, -100.9, -60, -94.1, -60, -71.3, -66, -64.1, -66, -21, -68.9, -21, -70, 38, -70 )
+
+[node name="Part1" type="CPUParticles2D" parent="."]
+position = Vector2( -3.05176e-05, -1.42859 )
+emitting = false
+amount = 3
+lifetime = 15.0
+one_shot = true
+speed_scale = 5.0
+explosiveness = 1.0
+randomness = 0.16
+texture = ExtResource( 4 )
+direction = Vector2( 0, -1 )
+spread = 180.0
+initial_velocity = 137.61
+initial_velocity_random = 0.6
+
+[node name="Part2" type="CPUParticles2D" parent="."]
+position = Vector2( -3.05176e-05, 0 )
+emitting = false
+amount = 4
+lifetime = 15.0
+one_shot = true
+speed_scale = 5.7
+explosiveness = 1.0
+randomness = 0.17
+texture = ExtResource( 2 )
+direction = Vector2( 0, -1 )
+spread = 180.0
+initial_velocity = 174.31
+initial_velocity_random = 0.6
+
+[node name="Part3" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 4
+lifetime = 15.0
+one_shot = true
+speed_scale = 5.0
+explosiveness = 1.0
+randomness = 0.16
+texture = ExtResource( 3 )
+direction = Vector2( 0, -1 )
+spread = 180.0
+initial_velocity = 146.79
+initial_velocity_random = 0.6
