@@ -1,21 +1,29 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://PlayerCat.cs" type="Script" id=1]
-[ext_resource path="res://playerGrey_walk1.png" type="Texture" id=2]
-[ext_resource path="res://playerGrey_walk2.png" type="Texture" id=3]
+[ext_resource path="res://mjaywalk2.png" type="Texture" id=2]
+[ext_resource path="res://mjaywalk1.png" type="Texture" id=3]
 [ext_resource path="res://tilesheet.png" type="Texture" id=4]
+[ext_resource path="res://tomstre.png" type="Texture" id=5]
+[ext_resource path="res://mjätkissa.png" type="Texture" id=6]
+[ext_resource path="res://CatSprite.cs" type="Script" id=7]
+[ext_resource path="res://Toaster.cs" type="Script" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "kick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "walk",
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 54.0
-height = 26.0
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 84, 70 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -229,18 +237,40 @@ position = Vector2( 251, -151 )
 current = true
 zoom = Vector2( 2, 2 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="PlayerCat"]
+[node name="CatSprite" type="AnimatedSprite" parent="PlayerCat"]
+scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 1 )
-animation = "walk"
+animation = "kick"
+script = ExtResource( 7 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCat"]
-position = Vector2( 0, -1 )
-shape = SubResource( 2 )
+[node name="CatCollision" type="CollisionShape2D" parent="PlayerCat"]
+position = Vector2( -6, 10 )
+shape = SubResource( 23 )
+one_way_collision = true
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="KickCollision" type="CollisionPolygon2D" parent="PlayerCat"]
+position = Vector2( -117, -353 )
+polygon = PoolVector2Array( 204, 377, 198, 385, 157, 377, 154, 397, 203, 397, 208, 390, 208, 380 )
+disabled = true
+one_way_collision = true
+
+[node name="LevelTiles" type="TileMap" parent="."]
 tile_set = SubResource( 20 )
 format = 1
 tile_data = PoolIntArray( 393213, 1, 0, 327685, 1, 1, 327686, 1, 2, 327687, 1, 2, 327688, 1, 2, 327689, 1, 2, 327690, 1, 2, 327691, 1, 2, 327692, 1, 2, 327693, 1, 2, 327694, 1, 2, 327695, 1, 2, 327696, 1, 3, 655356, 1, 2, 655357, 1, 2, 655358, 1, 2, 655359, 1, 2, 589824, 1, 2, 589825, 1, 2, 589826, 1, 2, 589827, 1, 2, 589828, 1, 2, 589829, 1, 2, 589830, 1, 2, 589831, 1, 2, 589832, 1, 2, 589833, 1, 2, 589834, 1, 2, 589835, 1, 2, 589836, 1, 2, 589837, 1, 2, 589838, 1, 2, 589839, 1, 2, 589840, 1, 2, 589841, 1, 2, 589842, 1, 2, 589843, 1, 2, 589844, 1, 2, 589845, 1, 2, 589846, 1, 2 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Toaster" type="Area2D" parent="."]
+position = Vector2( 646, 247 )
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Toaster"]
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Toaster"]
+scale = Vector2( 0.7, 0.7 )
+polygon = PoolVector2Array( 63, -88.9, 63, -87.7, 81, -84.7, 81, -83.5, 110, -74.5, 110, -73.2, 125, -65.2, 125, -63.7, 139, -46.7, 139, -42, 147, -8.2, 147, 28, 145.7, 28, 140.7, 59, 138.7, 59, 111.8, 83, 108.6, 83, 61.6, 114, 59.5, 114, 25.5, 132, 22.5, 132, 4.5, 141, -0.899994, 141, -29.8, 148, -33, 148, -65, 147, -65, 145.7, -93, 139.6, -93, 138.4, -105, 134.4, -105, 133.1, -124, 121.1, -124, 119.7, -135, 104.7, -135, 95, -140, 76.3, -140, 64, -143, 59.6, -143, 57, -145, -14, -142.8, -14, -126.7, -27, -123.6, -27, -77.5, -52, -73.4, -52, -54, -59.4, -54, -60.2, -22.5, -77, -19.1, -77, -6, -80.5, -6, -81.1, 5.39999, -88, 6.7, -88, 17, -89.7, 17, -91.1 )
