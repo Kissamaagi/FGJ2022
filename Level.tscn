@@ -150,263 +150,275 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Toaster" parent="." instance=ExtResource( 1 )]
-position = Vector2( 484, 272 )
-rotation = 0.230248
-
 [node name="ParallaxBackground" parent="." instance=ExtResource( 5 )]
 
-[node name="Cup" parent="." instance=ExtResource( 6 )]
-position = Vector2( -491, 223 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Objects" type="Node2D" parent="."]
 
-[node name="Cup2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -492, 26 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Toasters" type="Node" parent="Objects"]
 
-[node name="Cup3" parent="." instance=ExtResource( 6 )]
-position = Vector2( -708, 227 )
-scale = Vector2( 0.5, 0.5 )
+[node name="Toaster" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( 481, 273 )
+rotation = 0.230248
 
-[node name="Mandarin" parent="." instance=ExtResource( 7 )]
-position = Vector2( 949, 296 )
-collision_mask = 0
+[node name="Toaster2" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( -1643, 470 )
 
-[node name="Mandarin2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1004, 294 )
-collision_mask = 0
+[node name="Toaster3" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( -1814, 464 )
 
-[node name="Mandarin3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1058, 295 )
-collision_mask = 0
+[node name="Toaster4" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( 761, -58 )
 
-[node name="Mandarin4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 974, 260 )
-collision_mask = 0
+[node name="Toaster5" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( 6425, -122 )
 
-[node name="Mandarin5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1029, 259 )
-collision_mask = 0
+[node name="Toaster6" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( 2971, -253 )
 
-[node name="Mandarin6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1002, 222 )
-collision_mask = 0
+[node name="Toaster7" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( 2681, 588 )
 
-[node name="Cup4" parent="." instance=ExtResource( 6 )]
-position = Vector2( -707, -172 )
+[node name="Toaster8" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( 4380, 715 )
 
-[node name="Cup5" parent="." instance=ExtResource( 6 )]
-position = Vector2( -573, -178 )
+[node name="Toaster9" parent="Objects/Toasters" instance=ExtResource( 1 )]
+position = Vector2( 7199, 524 )
 
-[node name="Cucumber2" parent="." instance=ExtResource( 9 )]
-position = Vector2( -942, 425 )
+[node name="Plants" type="Node" parent="Objects"]
 
-[node name="Cucumber" parent="." instance=ExtResource( 9 )]
-position = Vector2( 414, 554 )
+[node name="Plant" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( -135, 385 )
 
-[node name="Plant" parent="." instance=ExtResource( 10 )]
-position = Vector2( -132, 384 )
-
-[node name="Plant2" parent="." instance=ExtResource( 10 )]
-position = Vector2( -246, 366 )
+[node name="Plant2" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( -249, 367 )
 scale = Vector2( 1.2, 1.2 )
 
-[node name="Plant3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2739, 249 )
+[node name="Plant3" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 2736, 250 )
 
-[node name="Plant4" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2844, 249 )
+[node name="Plant4" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 2841, 250 )
 
-[node name="Cup6" parent="." instance=ExtResource( 6 )]
-position = Vector2( -695, 17.0001 )
+[node name="Plant5" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( -1834, -125 )
 
-[node name="Cup7" parent="." instance=ExtResource( 6 )]
-position = Vector2( -584, 14 )
+[node name="Plant7" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 3838, 381 )
 
-[node name="Cup8" parent="." instance=ExtResource( 6 )]
-position = Vector2( -593, 208 )
-
-[node name="Toaster2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1640, 469 )
-
-[node name="Toaster3" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1811, 463 )
-
-[node name="Plant5" parent="." instance=ExtResource( 10 )]
-position = Vector2( -1831, -126 )
-
-[node name="Cucumber3" parent="." instance=ExtResource( 9 )]
-position = Vector2( -1649, -80 )
-
-[node name="Mandarin7" parent="." instance=ExtResource( 7 )]
-position = Vector2( -2225, 234 )
-collision_mask = 0
-
-[node name="Mandarin10" parent="." instance=ExtResource( 7 )]
-position = Vector2( -2188, 195 )
-collision_mask = 0
-
-[node name="Mandarin9" parent="." instance=ExtResource( 7 )]
-position = Vector2( -2099, 232 )
-collision_mask = 0
-
-[node name="Mandarin8" parent="." instance=ExtResource( 7 )]
-position = Vector2( -2161, 232 )
-collision_mask = 0
-
-[node name="Mandarin11" parent="." instance=ExtResource( 7 )]
-position = Vector2( -2124, 192 )
-collision_mask = 0
-
-[node name="Plant7" parent="." instance=ExtResource( 10 )]
-position = Vector2( 3841, 380 )
-
-[node name="Plant6" parent="." instance=ExtResource( 10 )]
-position = Vector2( 3706, 346 )
+[node name="Plant6" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 3703, 347 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="Toaster4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 764, -59 )
-
-[node name="Toaster5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6428, -123 )
-
-[node name="Cucumber4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 6627, -83 )
-
-[node name="Cup9" parent="." instance=ExtResource( 6 )]
-position = Vector2( 644, 274 )
-
-[node name="Cup10" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1703, 82.0001 )
-
-[node name="Cup11" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1821, 82.0001 )
-
-[node name="Cup12" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1956, 79.0001 )
-
-[node name="Toaster6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2974, -254 )
-
-[node name="Mandarin14" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2833, -221 )
-
-[node name="Mandarin12" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2733, -218 )
-
-[node name="Mandarin13" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2618, -222 )
-
-[node name="Plant8" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2311, -134 )
+[node name="Plant8" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 2308, -133 )
 scale = Vector2( 2, 2 )
 
-[node name="Cucumber5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 616, 555 )
+[node name="Plant9" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( -1288, 640 )
 
-[node name="Cucumber6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1164, 488 )
+[node name="Plant10" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 5372, 253 )
 
-[node name="Cucumber7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1534, 363 )
-
-[node name="Mandarin15" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1424, 610 )
-
-[node name="Mandarin16" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1534, 606 )
-
-[node name="Cup13" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1663, 593 )
-
-[node name="Toaster7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2684, 587 )
-
-[node name="Mandarin17" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2992, 296 )
-
-[node name="Cup14" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2480, 593 )
-
-[node name="Cucumber8" parent="." instance=ExtResource( 9 )]
-position = Vector2( 3459, 111 )
-
-[node name="Mandarin18" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3335, 673 )
-
-[node name="Mandarin19" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3430, 669 )
-
-[node name="Mandarin20" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3527, 673 )
-
-[node name="Plant9" parent="." instance=ExtResource( 10 )]
-position = Vector2( -1285, 639 )
-
-[node name="Toaster8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4383, 714 )
-
-[node name="Cup15" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4209, 721 )
-
-[node name="Mandarin21" parent="." instance=ExtResource( 7 )]
-position = Vector2( 4073, 734 )
-
-[node name="Cucumber9" parent="." instance=ExtResource( 9 )]
-position = Vector2( 4515, 492 )
-
-[node name="Plant10" parent="." instance=ExtResource( 10 )]
-position = Vector2( 5375, 252 )
-
-[node name="Plant11" parent="." instance=ExtResource( 10 )]
-position = Vector2( 5210, 219 )
+[node name="Plant11" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 5207, 220 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="Cup16" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3288, 85.0001 )
+[node name="Plant12" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( -1207, 196 )
 
-[node name="Plant12" parent="." instance=ExtResource( 10 )]
-position = Vector2( -1204, 195 )
+[node name="Plant13" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 6960, 509 )
 
-[node name="Cup17" parent="." instance=ExtResource( 6 )]
-position = Vector2( -1078, 213 )
+[node name="Plant14" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 7673, 318 )
 
-[node name="Cucumber10" parent="." instance=ExtResource( 9 )]
+[node name="Plant15" parent="Objects/Plants" instance=ExtResource( 10 )]
+position = Vector2( 7164, 58 )
+
+[node name="Cucumbers" type="Node2D" parent="Objects"]
+
+[node name="Cucumber2" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( -942, 425 )
+
+[node name="Cucumber" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( 414, 554 )
+
+[node name="Cucumber3" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( -1649, -80 )
+
+[node name="Cucumber4" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( 6627, -83 )
+
+[node name="Cucumber5" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( 616, 555 )
+
+[node name="Cucumber6" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( 1164, 488 )
+
+[node name="Cucumber7" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( 1534, 363 )
+
+[node name="Cucumber8" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( 3459, 111 )
+
+[node name="Cucumber9" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
+position = Vector2( 4515, 492 )
+
+[node name="Cucumber10" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
 position = Vector2( 5760, 494 )
 
-[node name="Toaster9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 7202, 523 )
-
-[node name="Plant13" parent="." instance=ExtResource( 10 )]
-position = Vector2( 6963, 508 )
-
-[node name="Mandarin22" parent="." instance=ExtResource( 7 )]
-position = Vector2( 6762, -87 )
-
-[node name="Cucumber11" parent="." instance=ExtResource( 9 )]
+[node name="Cucumber11" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
 position = Vector2( 6702, 561 )
 
-[node name="Plant14" parent="." instance=ExtResource( 10 )]
-position = Vector2( 7676, 317 )
-
-[node name="Plant15" parent="." instance=ExtResource( 10 )]
-position = Vector2( 7167, 57 )
-
-[node name="Mandarin23" parent="." instance=ExtResource( 7 )]
-position = Vector2( 7325, 94 )
-
-[node name="Cup18" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4677, 141 )
-
-[node name="Cup19" parent="." instance=ExtResource( 6 )]
-position = Vector2( 4552, 136 )
-
-[node name="Cup20" parent="." instance=ExtResource( 6 )]
-position = Vector2( 5870, 192 )
-
-[node name="Cup21" parent="." instance=ExtResource( 6 )]
-position = Vector2( 5689, 198 )
-
-[node name="Cucumber12" parent="." instance=ExtResource( 9 )]
+[node name="Cucumber12" parent="Objects/Cucumbers" instance=ExtResource( 9 )]
 position = Vector2( 5210, 424 )
+
+[node name="Mandarins" type="Node" parent="Objects"]
+
+[node name="Mandarin" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 946, 297 )
+collision_mask = 0
+
+[node name="Mandarin2" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 1001, 295 )
+collision_mask = 0
+
+[node name="Mandarin3" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 1055, 296 )
+collision_mask = 0
+
+[node name="Mandarin4" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 971, 261 )
+collision_mask = 0
+
+[node name="Mandarin5" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 1026, 260 )
+collision_mask = 0
+
+[node name="Mandarin6" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 999, 223 )
+collision_mask = 0
+
+[node name="Mandarin7" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( -2228, 235 )
+collision_mask = 0
+
+[node name="Mandarin10" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( -2191, 196 )
+collision_mask = 0
+
+[node name="Mandarin9" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( -2102, 233 )
+collision_mask = 0
+
+[node name="Mandarin8" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( -2164, 233 )
+collision_mask = 0
+
+[node name="Mandarin11" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( -2127, 193 )
+collision_mask = 0
+
+[node name="Mandarin14" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 2830, -220 )
+
+[node name="Mandarin12" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 2730, -217 )
+
+[node name="Mandarin13" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 2615, -221 )
+
+[node name="Mandarin15" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 1421, 611 )
+
+[node name="Mandarin16" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 1531, 607 )
+
+[node name="Mandarin17" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 2989, 297 )
+
+[node name="Mandarin18" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 3332, 674 )
+
+[node name="Mandarin19" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 3427, 670 )
+
+[node name="Mandarin20" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 3524, 674 )
+
+[node name="Mandarin21" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 4070, 735 )
+
+[node name="Mandarin22" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 6759, -86 )
+
+[node name="Mandarin23" parent="Objects/Mandarins" instance=ExtResource( 7 )]
+position = Vector2( 7322, 95 )
+
+[node name="Cups" type="Node" parent="Objects"]
+
+[node name="Cup" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -494, 224 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cup2" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -495, 27 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cup3" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -711, 228 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Cup4" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -710, -171 )
+
+[node name="Cup5" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -576, -177 )
+
+[node name="Cup6" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -698, 18.0001 )
+
+[node name="Cup7" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -587, 15 )
+
+[node name="Cup8" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -596, 209 )
+
+[node name="Cup9" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 641, 275 )
+
+[node name="Cup10" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 1700, 83.0001 )
+
+[node name="Cup11" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 1818, 83.0001 )
+
+[node name="Cup12" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 1953, 80.0001 )
+
+[node name="Cup13" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 1660, 594 )
+
+[node name="Cup14" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 2477, 594 )
+
+[node name="Cup15" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 4206, 722 )
+
+[node name="Cup16" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 3285, 86.0001 )
+
+[node name="Cup17" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( -1081, 214 )
+
+[node name="Cup18" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 4674, 142 )
+
+[node name="Cup19" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 4549, 137 )
+
+[node name="Cup20" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 5867, 193 )
+
+[node name="Cup21" parent="Objects/Cups" instance=ExtResource( 6 )]
+position = Vector2( 5686, 199 )
