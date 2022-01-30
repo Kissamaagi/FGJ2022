@@ -26,6 +26,11 @@ public class MainMenu : MarginContainer
         blinkCat.Animation = "default";
     }
 
+        public void _on_OptionsButton_pressed() {
+        Console.WriteLine("Clicked");
+        GetNode<PopupPanel>("VBoxContainer/HBoxContainer/MenuOptions/Label/PopupPanel").Popup_();
+    }
+
     public override void _Process(float delta){   
 
         timer++;
