@@ -21,6 +21,7 @@ public class Mandarin : Area2D
 
         DeathTimer = 600;
         GetNode<Sprite>("Sprite").Visible = false; 
+        Disconnect("area_entered", this, nameof(_on_enter));
     }
 
 
