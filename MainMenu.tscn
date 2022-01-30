@@ -156,8 +156,7 @@ custom_styles/panel = SubResource( 5 )
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MenuOptions/Label/PopupPanel"]
 anchor_right = 1.002
 anchor_bottom = 1.0
-margin_top = 35.0
-margin_right = -1.33008
+margin_right = -1.32996
 custom_colors/font_color = Color( 0.372549, 0.133333, 0.133333, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "
