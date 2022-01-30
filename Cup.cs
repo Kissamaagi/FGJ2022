@@ -14,7 +14,8 @@ public class Cup : Area2D
         Connect("area_entered", this, nameof(_on_enter));
     }
 
-    public void _on_enter(Node body) {
+    public void _on_enter(Node body)
+    {
         Console.WriteLine(body);
 
         CPUParticles2D explosion1 = GetNode<CPUParticles2D>("Part1");
@@ -26,12 +27,16 @@ public class Cup : Area2D
 
         DeathTimer = 600;
         GetNode<Sprite>("Sprite").Visible = false;
+        Disconnect("area_entered", this, nameof(_on_enter));
+
     }
 
-  public override void _Process(float delta){
-      if (DeathTimer != -1) {
-        if (DeathTimer > 0) { DeathTimer--; }
-        else { QueueFree(); }
-    }    
-  }
+    public override void _Process(float delta)
+    {
+        if (DeathTimer != -1)
+        {
+            if (DeathTimer > 0) { DeathTimer--; }
+            else { QueueFree(); }
+        }
+    }
 }

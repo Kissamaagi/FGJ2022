@@ -29,6 +29,8 @@ public class Toaster : Area2D
 
         DeathTimer = 600;
         GetNode<Sprite>("Sprite").Visible = false;
+        Disconnect("area_entered", this, nameof(_on_enter));
+
     }
 
     public override void _Process(float delta) {

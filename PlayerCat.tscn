@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://CatSprite.cs" type="Script" id=1]
 [ext_resource path="res://mjätkissa.png" type="Texture" id=2]
@@ -22,22 +22,13 @@
 [ext_resource path="res://jömpkissa.png" type="Texture" id=20]
 [ext_resource path="res://standcat2.png" type="Texture" id=21]
 [ext_resource path="res://standcat3.png" type="Texture" id=22]
+[ext_resource path="res://gameditty.mp3" type="AudioStream" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "walk",
-"speed": 20.0
-}, {
-"frames": [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "stand",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 20 ) ],
-"loop": true,
-"name": "jump",
+"name": "kickback",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -45,10 +36,20 @@ animations = [ {
 "name": "kickfront",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 20 ) ],
 "loop": true,
-"name": "kickback",
+"name": "jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 21 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 14 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 3 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "walk",
+"speed": 20.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=23]
@@ -57,6 +58,11 @@ extents = Vector2( 84, 70 )
 [node name="PlayerCat" type="KinematicBody2D"]
 position = Vector2( 117, 353 )
 script = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+volume_db = -5.553
+autoplay = true
 
 [node name="CatSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.8, 0.8 )
