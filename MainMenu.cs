@@ -17,8 +17,14 @@ public class MainMenu : MarginContainer
         AnimatedSprite blinkCat = GetNode<AnimatedSprite>("VBoxContainer/HBoxContainer/BlinkCat");
         Console.WriteLine("blinking...");
         blinkCat.Animation = "blink";
+        blinkCat.Connect("animation_finished", this, nameof(_on_AnimatedSprite_animation_finished));
     }
 
+    public void _on_AnimatedSprite_animation_finished() {
+        AnimatedSprite blinkCat = GetNode<AnimatedSprite>("VBoxContainer/HBoxContainer/BlinkCat");
+
+        blinkCat.Animation = "default";
+    }
 
     public override void _Process(float delta){   
 
