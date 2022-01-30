@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gameditty.mp3-c7552ac87418e906e8495d544cd72f54.mp3str"
+
+[deps]
+
+source_file="res://assets/gameditty.mp3"
+dest_files=[ "res://.import/gameditty.mp3-c7552ac87418e906e8495d544cd72f54.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
