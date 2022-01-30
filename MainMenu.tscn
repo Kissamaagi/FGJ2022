@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://menu_textures/title.png" type="Texture" id=1]
 [ext_resource path="res://menu_textures/pink.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://MainMenu.cs" type="Script" id=8]
 [ext_resource path="res://StartButton.cs" type="Script" id=9]
 [ext_resource path="res://OptionsButton.cs" type="Script" id=10]
+[ext_resource path="res://assets/gamejazz.mp3" type="AudioStream" id=11]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -62,6 +63,11 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -8.583
+autoplay = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 60.0

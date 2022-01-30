@@ -22,7 +22,7 @@
 [ext_resource path="res://jömpkissa.png" type="Texture" id=20]
 [ext_resource path="res://standcat2.png" type="Texture" id=21]
 [ext_resource path="res://standcat3.png" type="Texture" id=22]
-[ext_resource path="res://gameditty.mp3" type="AudioStream" id=23]
+[ext_resource path="res://assets/gameditty.mp3" type="AudioStream" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -61,7 +61,6 @@ script = ExtResource( 5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 23 )
-volume_db = -5.553
 autoplay = true
 
 [node name="CatSprite" type="AnimatedSprite" parent="."]
